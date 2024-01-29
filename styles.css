@@ -1,24 +1,21 @@
-body {
-  display: flex;
-  justify-content: center;
-  padding: 0 10px 10px 0;
-}
-
 input {
-  width: 100%;
-  margin-bottom: 50px;
+  max-width: 100%;
 }
 .btn-primary {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-p {
-  font-size: 20px;
-}
+
 .btn-danger {
   float: right;
   margin: 5px;
 }
 li {
   margin-bottom: 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+input {
+  max-width: 70%;
 }

@@ -11,7 +11,7 @@ const addToList = () => {
   inputText.value = "";
 };
 
-inputText.addEventListener("keydown", function (event) {
+inputText.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     addToList();
   }
