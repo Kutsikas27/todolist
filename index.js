@@ -41,8 +41,5 @@ const clearAllTasks = () => {
 const removeTask = (item) => {
   itemsArray.splice(itemsArray.indexOf(item), 1);
   localStorage.setItem("items", JSON.stringify(itemsArray));
-
-  console.log(localStorage);
-  console.log(itemsArray);
 };
 itemsArray.forEach(addTask);
