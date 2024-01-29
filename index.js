@@ -18,8 +18,9 @@ inputText.addEventListener("keydown", function (event) {
 });
 
 const addTask = (text) => {
-  let li = document.createElement("li");
-  let btn = document.createElement("button");
+  if (!text) return;
+  const li = document.createElement("li");
+  const btn = document.createElement("button");
   li.textContent = text;
   li.classList.add("list-group-item", "list-group-item-success");
 
