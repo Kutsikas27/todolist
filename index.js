@@ -1,10 +1,12 @@
 // @ts-nocheck
 const inputText = document.getElementById("userInput");
+
 let itemsArray = localStorage.getItem("items")
   ? JSON.parse(localStorage.getItem("items"))
   : [];
 
 const addToList = () => {
+  if (!inputText.value) return;
   itemsArray.push({ id: new Date().getTime(), text: inputText.value });
   localStorage.setItem("items", JSON.stringify(itemsArray));
   addTask(itemsArray[itemsArray.length - 1]);
@@ -18,8 +20,6 @@ inputText.addEventListener("keydown", (event) => {
 });
 
 const addTask = (item) => {
-  console.log(item.text);
-  if (!item.text) return;
   const li = document.createElement("li");
   const btn = document.createElement("button");
   li.textContent = item.text;
